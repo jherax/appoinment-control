@@ -1,0 +1,55 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>README</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.classless.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/dracula/highlightjs/dracula.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <style> pre>code.hljs {padding: var(--spacing); color: rgb(162, 175, 185);} blockquote p {margin-bottom: 0;}</style>
+    <script>hljs.highlightAll();</script>
+  </head>
+  <body>
+    <main>
+    <!-- markdownlint-disable MD033 -->
+<h1 id="medicalappointmentcontrol">Medical Appointment Control</h1>
+<h2 id="environment">Environment</h2>
+<p>This aplication is created using Node.js v20. It is recommended using
+<strong><a href="https://github.com/creationix/nvm">nvm</a></strong> (Node Version Manager) to manage
+Node.js versions. Go to
+<a href="https://github.com/creationix/nvm">github.com/creationix/nvm</a> and check the
+installation process for your OS.</p>
+<p>Make sure to set the env variables. For local environment you can create a <code class="prettyprint">.env</code> file with the following environment variables:</p>
+<pre class="prettyprint linenums"><code class="bash language-bash"># dev | prod | test
+NODE_ENV=dev
+APP_HOST=localhost
+APP_PORT=3004
+
+## Running the server
+
+Install required dependencies:
+</code></pre>
+<p>bash
+npm install</p>
+<pre class="prettyprint linenums"><code>After all dependencies are installed, just run the commands below:
+</code></pre>
+<p>bash
+npm run dev:server
+```</p>
+<h2 id="scripts">Scripts</h2>
+<ul>
+<li> <code class="prettyprint">npm run dev:server</code> - Starts the server in development mode (watch mode).</li>
+<li> <code class="prettyprint">npm run build-all</code>- Builds the project in production mode.</li>
+<li> <code class="prettyprint">npm run start</code> - Starts the server (compiled).</li>
+<li> <code class="prettyprint">npm run test</code> - Runs all tests.</li>
+</ul>
+<h2 id="endpoints">Endpoints</h2>
+<p>The following endpoints are exposed by Express:</p>
+<ul>
+<li> <code class="prettyprint">/docs</code> This README in html.</li>
+</ul>
+    </main>
+  </body>
+</html>
