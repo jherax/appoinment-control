@@ -62,13 +62,3 @@ if [ ! -z "$backendfiles" ]; then
   cd ..
 fi
 
-frontendfiles=$(git diff --name-only --cached --diff-filter=ACMR "*.md" | grep -E "^frontend/" | cut -c10-)
-if [ ! -z "$frontendfiles" ]; then
-  cd frontend
-  npm run gendocs
-  htmlfiles=$(git diff --name-only --diff-filter=ACMR "*.html" | grep -E "^frontend/" | cut -c10-)
-  if [ ! -z "$htmlfiles" ]; then
-    git add $htmlfiles
-  fi
-  cd ..
-fi
